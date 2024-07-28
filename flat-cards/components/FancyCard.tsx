@@ -12,21 +12,14 @@ export default function FancyCard() {
                     }}
                     style={styles.cardImage}
                 />
-                <View>
+                <View style={styles.cardBody}>
                     <Text style={styles.cardTitle}>Fairy Meadows</Text>
                     <Text style={styles.cardLabel}>Sakardu</Text>
                     <Text style={styles.cardDescription}>
                         Fairy Meadows is a stunning alpine meadow located in the
                         Gilgit-Baltistan region of Pakistan, at the base of
                         Nanga Parbat, the world's ninth highest mountain. Known
-                        for its breathtaking views and lush greenery, it serves
-                        as a popular trekking destination for adventure
-                        enthusiasts and nature lovers. The area offers serene
-                        landscapes, dense forests, and the majestic sight of the
-                        Nanga Parbat peak. Accessing Fairy Meadows involves a
-                        challenging journey, including a jeep ride and a trek,
-                        adding to the allure of this remote and picturesque
-                        destination.
+                        for its breathtaking views and lush greenery.
                     </Text>
                     <Text style={styles.cardFooter}>16 to 20 hours away</Text>
                 </View>
@@ -42,14 +35,57 @@ const styles = StyleSheet.create({
         paddingHorizontal: 10,
     },
 
-    card: {},
-    elevatedCard: {},
+    card: {
+        width: 350,
+        height: 350,
+        borderRadius: 8,
+        marginHorizontal: 15,
+        marginVertical: 15,
+    },
+    elevatedCard: {
+        backgroundColor: "#FFFFFF",
+        elevation: 4,
+        shadowOffset: {
+            width: 1,
+            height: 1,
+        },
+    },
     cardImage: {
         height: 180,
+        marginBottom: 10,
+        borderTopLeftRadius: 8,
+        borderTopRightRadius: 8,
+    },
+    cardBody: {
+        flex: 1,
+        flexGrow: 1,
+        paddingHorizontal: 6,
     },
 
-    cardTitle: {},
-    cardLabel: {},
-    cardDescription: {},
-    cardFooter: {},
+    cardTitle: {
+        color: "#000000",
+        fontWeight: "bold",
+        fontSize: 20,
+        marginHorizontal: 10,
+    },
+    cardLabel: {
+        marginHorizontal: 10,
+        fontSize: 14,
+        fontWeight: "bold",
+        fontStyle: "italic",
+        color: "#000000",
+    },
+    cardDescription: {
+        marginTop: 2,
+        marginHorizontal: 10,
+        fontSize: 14,
+        color: "#000000",
+    },
+    cardFooter: {
+        marginHorizontal: 10,
+        fontSize: 14,
+        fontWeight: "bold",
+        fontStyle: "italic",
+        color: "#000000",
+    },
 });
